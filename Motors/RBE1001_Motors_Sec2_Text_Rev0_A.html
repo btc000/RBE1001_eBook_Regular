@@ -1,0 +1,161 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>RBE2001 Virtual Study Aid Template</title>
+<script type="text/javascript" src="../src/tree_menu.js"></script>
+<link rel="stylesheet" type="text/css" href="../src/pagestyle.css">
+<style type="text/css">
+<!--
+-->
+</style><!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]--></head>
+
+<body>
+
+<div class="container">
+  <header>
+    <a href="#"><img src="../images/WPI_Inst_Prim_FulClr_Rev.png" alt="Insert Logo Here" name="Insert_logo" width="180" height="63" id="Insert_logo" style="background-color: #AC2B37; display: block; padding: 10px;" /></a>
+  </header>
+  <div class="sidebar1">
+    <span class="sideBarTitle">Introduction to Robotics</span>
+    
+<ul class="mktree" id="tree1">
+  <li>Chapter 1
+		<ul>
+			<li>Introduction
+             <ul>
+                    <li><a href="../OpAmp_Sec1_Text_Rev0_A.html">Text</a></li>
+                    <li>Practice</li>
+                </ul>
+            </li>
+            <li>Mathematical Model
+                <ul>
+                    <li><a href="../OpAmp_Sec2_Text_Rev0_A.html">Text</a></li>
+                    <li>Problem Set</li>
+                    <li>Video</li>
+                </ul>
+            </li>
+            <li>Section 3
+                <ul>
+                    <li>Text</li>
+                    <li>Problem Set</li>
+                    <li>Video</li>
+                </ul>
+            </li>
+		</ul>
+	</li>
+	<li>Chapter 2
+		<ul>
+			<li>Section 1
+                <ul>
+                    <li>Text</li>
+                    <li>Problem Set</li>
+                    <li>Video</li>
+                </ul>
+            </li>
+            <li>Section 2
+                <ul>
+                    <li>Text</li>
+                    <li>Problem Set</li>
+                    <li>Video</li>
+                </ul>
+            </li>
+            <li>Section 3
+                <ul>
+                    <li>Text</li>
+                    <li>Problem Set</li>
+                    <li>Video</li>
+                </ul>
+            </li>
+		</ul>
+	</li>
+    <li>Chapter 3
+		<ul>
+			<li>Section 1
+                <ul>
+                    <li>Text</li>
+                    <li>Problem Set</li>
+                    <li>Video</li>
+                </ul>
+            </li>
+            <li>Section 2
+                <ul>
+                    <li>Text</li>
+                    <li>Problem Set</li>
+                    <li>Video</li>
+                </ul>
+            </li>
+            <li>Section 3
+                <ul>
+                    <li>Text</li>
+                    <li>Problem Set</li>
+                    <li>Video</li>
+                </ul>
+            </li>
+		</ul>
+	</li>
+</ul>
+    <aside>
+    </aside>
+  <!-- end .sidebar1 --></div>
+  <article class="content">
+    <h1>Motors</h1>
+    <section>
+     <h2>Internal Workings of a Permanent Magnet DC Motor</h2>
+      <p>All  electric motors use electromagnets to generate forces within the motor,  creating rotation. In a Permanent Magnet DC (PMDC) motor, these electromagnets react with a pair of  permanent magnets, created from naturally ferromagnetic materials, treated to  permanently maintain their magnetic field.</p>
+      <p>
+      A PMDC motor is divided into two main parts, the stationary stator, and the rotating armature. The permanent magnets are placed on opposite ends of the stator, with opposite poles facing inwards. In between these magnets lies the armature, mounted on bearings and connected to the output shaft of the motor. The armature consists of a metal core, typically iron, which will readily take on magnetic properties. The armature is wrapped in one or more copper coils. This combination serves as a powerful electromagnet when current is passed through the coils.
+      </p>
+      <div align="center" class="picDiv" id="bodyImg1">
+        <table>
+        <caption align="bottom" class="captionText">
+        Figure 2-1 - PICTURE OF CROSS SECTION OF A MOTOR.
+        </caption>
+              <td><img src="../images/RBE1001_Motors_Figure1.jpg" width="400" height="301"></td></tr>
+      </table>
+  </div>
+      <p>
+      Imagine for a second energizing this electromagnet. The armature will take on the properties of a permanent magnet. Forces will be generated at each end of the armature, caused by attraction to one end of the stator, and opposing the other. This creates a couple moment, forcing the armature to turn. However, as can be seen in the figures below, the armature will quickly reach a stable equilibrium position, where the forces do not generate a moment, and any disturbance in either direction will result in the armature being pulled back to this stationary position.
+      </p>
+<div align="center" class="picDiv" id="bodyImg1">
+        <table>
+        <caption align="bottom" class="captionText">
+        Figure 2-2 - PICTURES OF MOTOR ROTATING AND FORCES.
+        </caption>
+              <td><img src="../images/RBE1001_Motors_Figure1.jpg" width="400" height="301"></td></tr>
+      </table>
+  </div>
+
+<p>
+This problem is solved by a set of components called the Commutator and brushes. The commutator is typically represented as a pair of half-circle copper rings, with a small gap or piece of insulation between them. The brushes are metal strips or blocks which run along the outside surface of the commutator. The commutator rotates with the armature, and the brushes remain fixed to the stator. The coils of the armature are electrically connected to the commutator rings. Current is passed through the brushes, which is then transmitted to the armature though their contact with the commutator.</p>
+      
+<p>
+However, each time the commutator makes a halfrotation, the rings switch which brush they were in contact with (see this animated here). This has the effect of flipping the current flow in the armature. Inverting the direction of current also inverts the magnetic field generated by the armature. In the motor, the commutator is arranged such that this flip occurs just as the motor reaches the equilibrium position described above. But now, flipping the current will pull the armature through another 180 degrees of rotation. This cycle continues every half rotation, allowing the motor to continually rotate.</p>
+
+<p><strong><a href="RBE1001_Motors_Sec1_Text_Rev0_A.html">&lArr; Previous Page</a></strong>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<strong><a href="PRBE1001_Motor_Menu_Rev0_A.html">Menu</a></strong>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+<strong><a href="RBE1001_Motors_Sec3_Text_Rev0_A.html">Next Page &rArr;</a></p></strong>
+
+<p style="text-align:center"><strong><a href="https://docs.google.com/forms/d/1yYVLX-CHQlKG1wzhoCCCK5ogmY0jLGRjtkXJk09xU-I/viewform">Give Feedback!</a></strong></p>
+
+    </section>
+    
+  <!-- end .content --></article>
+  <aside>
+    <h4>Definitions</h4>
+    <p><strong>Transducer</strong> something that changes enegy from one form to another.</p>
+    <p><strong>Torque</strong> twisting Force. </p>
+    <p><strong>Power</strong> rate of work.</p>
+
+         <p>&nbsp;</p>
+ </aside>
+  <footer>
+    <p>For more information visit your professor, TA or google/wikipedia.</p>
+    <address>
+      Developed for the use of WPI Students in RBE1001
+    </address>
+  </footer>
+  <!-- end .container --></div>
+</body>
+</html>

@@ -1,0 +1,224 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <!-- RBE1001 IQP 2012 -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta charset="utf-8">
+<title>RBE2001 Virtual Study Aid Template</title>
+<script type="text/javascript" src="../src/tree_menu.js"></script>
+<link rel="stylesheet" type="text/css" href="../src/pagestyle.css">
+<style type="text/css">
+canvas {
+                      image-rendering: optimizeSpeed;
+                      -webkit-interpolation-mode: nearest-neighbor;
+                      margin: 0px;
+                      padding: 0px;
+                      border: 0px;
+            }
+            :-webkit-full-screen #canvas {
+                 width: 100%;
+                 height: 100%;
+            }
+            div.gm4html5_div_class
+            {
+              margin: 0px;
+              padding: 0px;
+              border: 0px;
+            }
+            /* START - Login Dialog Box */
+            div.gm4html5_login
+            {
+                 padding: 20px;
+                 position: absolute;
+                 border: solid 2px #000000;
+                 background-color: #404040;
+                 color:#00ff00;
+                 border-radius: 15px;
+                 box-shadow: #101010 20px 20px 40px;
+            }
+            div.gm4html5_cancel_button
+            {
+                 float: right;
+            }
+            div.gm4html5_login_button
+            {
+                 float: left;
+            }
+            div.gm4html5_login_header
+            {
+                 text-align: center;
+            }
+            /* END - Login Dialog Box */
+            :-webkit-full-screen {
+               width: 100%;
+               height: 100%;
+            }
+<!--
+-->
+</style><!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]--></head>
+
+<body>
+
+<div class="container">
+  <header>
+    <a href="#"><img src="../images/WPI_Inst_Prim_FulClr_Rev.png" alt="Insert Logo Here" name="Insert_logo" width="180" height="63" id="Insert_logo" style="background-color: #AC2B37; display: block; padding: 10px;" /></a>
+  </header>
+  <div class="sidebar1">
+    <span class="sideBarTitle">Introduction to Robotics</span>
+    
+<ul class="mktree" id="tree1">
+  <li>Chapter 1
+		<ul>
+			<li>Introduction
+             <ul>
+                    <li><a href="../OpAmp_Sec1_Text_Rev0_A.html">Text</a></li>
+                    <li>Practice</li>
+                </ul>
+            </li>
+            <li>Mathematical Model
+                <ul>
+                    <li><a href="../OpAmp_Sec2_Text_Rev0_A.html">Text</a></li>
+                    <li>Problem Set</li>
+                    <li>Video</li>
+                </ul>
+            </li>
+            <li>Section 3
+                <ul>
+                    <li>Text</li>
+                    <li>Problem Set</li>
+                    <li>Video</li>
+                </ul>
+            </li>
+		</ul>
+	</li>
+	<li>Chapter 2
+		<ul>
+			<li>Section 1
+                <ul>
+                    <li>Text</li>
+                    <li>Problem Set</li>
+                    <li>Video</li>
+                </ul>
+            </li>
+            <li>Section 2
+                <ul>
+                    <li>Text</li>
+                    <li>Problem Set</li>
+                    <li>Video</li>
+                </ul>
+            </li>
+            <li>Section 3
+                <ul>
+                    <li>Text</li>
+                    <li>Problem Set</li>
+                    <li>Video</li>
+                </ul>
+            </li>
+		</ul>
+	</li>
+    <li>Chapter 3
+		<ul>
+			<li>Section 1
+                <ul>
+                    <li>Text</li>
+                    <li>Problem Set</li>
+                    <li>Video</li>
+                </ul>
+            </li>
+            <li>Section 2
+                <ul>
+                    <li>Text</li>
+                    <li>Problem Set</li>
+                    <li>Video</li>
+                </ul>
+            </li>
+            <li>Section 3
+                <ul>
+                    <li>Text</li>
+                    <li>Problem Set</li>
+                    <li>Video</li>
+                </ul>
+            </li>
+		</ul>
+	</li>
+</ul>
+    <aside>
+    </aside>
+  <!-- end .sidebar1 --></div>
+  <article class="content">
+    <h1>Motors</h1>
+    <section>
+     <h2>Chossing the Proper Trasmission for a Motor</h2>
+ 
+ 
+ <p>
+There was a lot of talk in the last section about choosing at what torque to operate a motor. How is this done?
+</p>
+<p>
+
+The first, and most obvious way to do this, is by changing the load the motor lifts. Say you have a 1foot long pivoting arm, that needs to lift 5 pounds. But your motor can only output four foot*pounds, even at stall. Reducing the weight being lifted down to two pounds would work, but this isn’t always possible.
+</p>
+<p>
+
+The better way to alter the torque that a motor “feels” is through using transmissions. Transmissions are another type of transducer, which alter the torque and speed characteristics of a device. Transmissions are represented using ratios. For example, a transmission with a 2.5:1 ratio will multiply the torque output by a motor by 2.5, while dividing the speed it outputs by 2.5. This means that a motor that previously output 2 foot*pounds of torque at peak power, now can output 5 foot*pounds, while still performing at peak power.
+</p>
+<p>
+
+In order to determine the transmission ratio you need to use, use this formula:
+</p>
+<p>
+<strong>Ratio = Desired Torque on Motor Curve *Transmission Efficiency / Required torque</strong>
+</p>
+<p>
+Included in Figure 7 is a tool which should help you get the feel for how transmissions affect a motor, and visualize how a motor behaves at different points on the motor curve. Experiment with different ratios and weights to develop an understanding of how they change the system’s behavior.
+</p>
+<p>
+
+This tool will also give you a targeted wattage to aim for. This is a typical design problem in many systems; the total mechanical wattage needed will be known, and the designer must set up the system in order to generate the correct amount of watts from the motor. If the desired wattage is below the motor’s peak power, a larger motor must be used.
+</p>
+
+<div class="gm4html5_div_class" id="gm4html5_div_id">
+            <!-- Create the canvas element the game draws to -->
+            <!-- Reduced from original 640x480 to 560x420 -->
+            <canvas id="canvas" width="560" height="420">
+               <p>Your browser doesn't support HTML5 canvas.</p>
+            </canvas><textarea style="display: none;" rows="20" cols="100" id="debug_console"></textarea>
+        </div>
+
+        <!-- Run the game code -->
+        <script type="text/javascript" src="Motor_Interactive_files/index.js"></script>
+
+
+
+<p><strong><a href="RBE1001_Motors_Sec4_Text_Rev0_A.html">&lArr; Previous Page</a></strong>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<strong><a href="PRBE1001_Motor_Menu_Rev0_A.html">Menu</a></strong>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+<strong><a href="RBE1001_Motors_Sec6_Text_Rev0_A.html">Next Page &rArr;</a></p></strong>
+
+<p style="text-align:center"><strong><a href="https://docs.google.com/forms/d/1yYVLX-CHQlKG1wzhoCCCK5ogmY0jLGRjtkXJk09xU-I/viewform">Give Feedback!</a></strong></p>
+
+    </section>
+    
+  <!-- end .content --></article>
+  <aside>
+    <h4>Definitions</h4>
+    <p><strong>Transducer</strong> something that changes enegy from one form to another.</p>
+    <p><strong>Torque</strong> twisting Force. </p>
+    <p><strong>Power</strong> rate of work.</p>
+
+         <p>&nbsp;</p>
+ </aside>
+  <footer>
+    <p>For more information visit your professor, TA or google/wikipedia.</p>
+    <address>
+      Developed for the use of WPI Students in RBE1001
+    </address>
+  </footer>
+  <!-- end .container --></div>
+</body>
+</html>

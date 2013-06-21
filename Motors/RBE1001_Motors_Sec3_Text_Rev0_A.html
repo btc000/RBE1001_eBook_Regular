@@ -1,0 +1,154 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>RBE2001 Virtual Study Aid Template</title>
+<script type="text/javascript" src="../src/tree_menu.js"></script>
+<link rel="stylesheet" type="text/css" href="../src/pagestyle.css">
+<style type="text/css">
+<!--
+-->
+</style><!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]--></head>
+
+<body>
+
+<div class="container">
+  <header>
+    <a href="#"><img src="../images/WPI_Inst_Prim_FulClr_Rev.png" alt="Insert Logo Here" name="Insert_logo" width="180" height="63" id="Insert_logo" style="background-color: #AC2B37; display: block; padding: 10px;" /></a>
+  </header>
+  <div class="sidebar1">
+    <span class="sideBarTitle">Introduction to Robotics</span>
+    
+<ul class="mktree" id="tree1">
+  <li>Chapter 1
+		<ul>
+			<li>Introduction
+             <ul>
+                    <li><a href="../OpAmp_Sec1_Text_Rev0_A.html">Text</a></li>
+                    <li>Practice</li>
+                </ul>
+            </li>
+            <li>Mathematical Model
+                <ul>
+                    <li><a href="../OpAmp_Sec2_Text_Rev0_A.html">Text</a></li>
+                    <li>Problem Set</li>
+                    <li>Video</li>
+                </ul>
+            </li>
+            <li>Section 3
+                <ul>
+                    <li>Text</li>
+                    <li>Problem Set</li>
+                    <li>Video</li>
+                </ul>
+            </li>
+		</ul>
+	</li>
+	<li>Chapter 2
+		<ul>
+			<li>Section 1
+                <ul>
+                    <li>Text</li>
+                    <li>Problem Set</li>
+                    <li>Video</li>
+                </ul>
+            </li>
+            <li>Section 2
+                <ul>
+                    <li>Text</li>
+                    <li>Problem Set</li>
+                    <li>Video</li>
+                </ul>
+            </li>
+            <li>Section 3
+                <ul>
+                    <li>Text</li>
+                    <li>Problem Set</li>
+                    <li>Video</li>
+                </ul>
+            </li>
+		</ul>
+	</li>
+    <li>Chapter 3
+		<ul>
+			<li>Section 1
+                <ul>
+                    <li>Text</li>
+                    <li>Problem Set</li>
+                    <li>Video</li>
+                </ul>
+            </li>
+            <li>Section 2
+                <ul>
+                    <li>Text</li>
+                    <li>Problem Set</li>
+                    <li>Video</li>
+                </ul>
+            </li>
+            <li>Section 3
+                <ul>
+                    <li>Text</li>
+                    <li>Problem Set</li>
+                    <li>Video</li>
+                </ul>
+            </li>
+		</ul>
+	</li>
+</ul>
+    <aside>
+    </aside>
+  <!-- end .sidebar1 --></div>
+  <article class="content">
+    <h1>Motors</h1>
+    <section>
+     <h2>Motor Curves</h2>
+      <p>Let’s start with a straightforward concept. As the load which a motor must lift increases, the motor will slow down. Eventually, the load could reach such a high level that the motor completely stops, or stalls. However, the motor will struggle against this condition, and output the most torque it possibly can to attempt to break out of the stall. This maximum torque value is known as stall torque.</p>
+      <p>
+What happens on the other end of the spectrum, if the motor is allowed to free spin? This time, speed will be at its maximum. But torque, far from being constant, is effectively zero. The motor only needs to output enough torque to overcome wind resistance and internal friction, and as a result, no usable torque is produced at the shaft. In between, we will see the same pattern occur, speed being reduced as torque increases, and vice versa. Up until it reaches stall, the motor will only output enough torque to overcome external forces and rotate at a constant speed.
+</p>
+<p>
+This relationship between torque and speed can be graphed. Since the external torque a motor will have to move is typically known, torque is usually used as the independent variable, with speed on the Y axis as the dependent varable. A typical torque-speed graph can be found in the figure below. In a DC motor, the relationship is always linear. Other types of motors have a more complex relationship between output torque and output speed.
+</p>
+
+      <div align="center" class="picDiv" id="bodyImg1">
+        <table>
+        <caption align="bottom" class="captionText">
+        Figure 3-1 - BASIC MOTOR LINE FROM FREE TO STALL.
+        </caption>
+              <td><img src="../images/RBE1001_Motors_Figure1.jpg" width="400" height="301"></td></tr>
+      </table>
+  </div>
+      <p>
+Other properties of electric motors, discussed in the <a href="../RBE1001_Motors_Sec1_Text_Rev0_A.html">Motor Introduction</a> section, vary with torque as well. A graph showing the speed, power, current draw, and efficiency of a motor as they relate to a changing output torque is known as a motor curve. An entire motor curve can be derived through four data points: free speed, free speed, current draw, stall torque, and stall current draw.
+</p>
+<p>
+Based on your knowledge of mechanical power, transmissions, and the effect that increased load has on torque, try playing with the tool found here. Then, read about the details of motor curves, for further insight on the topic.
+</p>
+
+<p><strong><a href="RBE1001_Motors_Sec2_Text_Rev0_A.html">&lArr; Previous Page</a></strong>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<strong><a href="PRBE1001_Motor_Menu_Rev0_A.html">Menu</a></strong>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+<strong><a href="RBE1001_Motors_Sec4_Text_Rev0_A.html">Next Page &rArr;</a></p></strong>
+
+<p style="text-align:center"><strong><a href="https://docs.google.com/forms/d/1yYVLX-CHQlKG1wzhoCCCK5ogmY0jLGRjtkXJk09xU-I/viewform">Give Feedback!</a></strong></p>
+
+    </section>
+    
+  <!-- end .content --></article>
+  <aside>
+    <h4>Definitions</h4>
+    <p><strong>Transducer</strong> something that changes enegy from one form to another.</p>
+    <p><strong>Torque</strong> twisting Force. </p>
+    <p><strong>Power</strong> rate of work.</p>
+
+         <p>&nbsp;</p>
+ </aside>
+  <footer>
+    <p>For more information visit your professor, TA or google/wikipedia.</p>
+    <address>
+      Developed for the use of WPI Students in RBE1001
+    </address>
+  </footer>
+  <!-- end .container --></div>
+</body>
+</html>

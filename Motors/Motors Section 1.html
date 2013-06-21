@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title> Introduction to Robotics - Motors  - Main website name</title>
+		<!-- For responsive site
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		-->
+		<script type="text/javascript" src="../js/tree_menu.js"></script>
+		<link rel="stylesheet" type="text/css" href="../css/pagestyle.css">
+		<style type="text/css">
+		<!--
+		-->
+		</style><!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+
+	<div class="container">
+	  <header>
+	    <a href="#"><img src="../images/WPI_Inst_Prim_FulClr_Rev.png" alt="Insert Logo Here" name="Insert_logo" width="180" height="63" id="Insert_logo" style="background-color: #AC2B37; display: block; padding: 10px;" /></a>
+	  </header>
+	<div class="sidebar1">
+    <span class="sideBarTitle">Introduction to Robotics</span>
+    	<ul class="mktree" id="tree1">
+  <li>Chapter 1
+		<ul>
+			<li>Introduction
+		             <ul>
+		                    <li><a href="../OpAmp_Sec1_Text_Rev0_A.html">Text</a></li>
+		                    <li>Practice</li>
+		                </ul>
+		            </li>
+		            <li>Mathematical Model
+		                <ul>
+		                    <li><a href="../OpAmp_Sec2_Text_Rev0_A.html">Text</a></li>
+		                    <li>Problem Set</li>
+		                    <li>Video</li>
+		                </ul>
+		            </li>
+		            <li>Section 3
+		                <ul>
+		                    <li>Text</li>
+		                    <li>Problem Set</li>
+		                    <li>Video</li>
+		                </ul>
+		            </li>
+				</ul>
+			</li>
+			<li>Chapter 2
+				<ul>
+					<li>Section 1
+		                <ul>
+		                    <li>Text</li>
+		                    <li>Problem Set</li>
+		                    <li>Video</li>
+		                </ul>
+		            </li>
+		            <li>Section 2
+		                <ul>
+		                    <li>Text</li>
+		                    <li>Problem Set</li>
+		                    <li>Video</li>
+		                </ul>
+		            </li>
+		            <li>Section 3
+		                <ul>
+		                    <li>Text</li>
+		                    <li>Problem Set</li>
+		                    <li>Video</li>
+		                </ul>
+		            </li>
+				</ul>
+			</li>
+		    <li>Chapter 3
+				<ul>
+					<li>Section 1
+		                <ul>
+		                    <li>Text</li>
+		                    <li>Problem Set</li>
+		                    <li>Video</li>
+		                </ul>
+		            </li>
+		            <li>Section 2
+		                <ul>
+		                    <li>Text</li>
+		                    <li>Problem Set</li>
+		                    <li>Video</li>
+		                </ul>
+		            </li>
+		            <li>Section 3
+		                <ul>
+		                    <li>Text</li>
+		                    <li>Problem Set</li>
+		                    <li>Video</li>
+		                </ul>
+		            </li>
+				</ul>
+			</li>
+		</ul>
+    <aside>
+    </aside>
+  <!-- end .sidebar1 --></div>
+  	<article class="content">
+    <h1>Motors</h1>
+    <section>
+     <h2>Introduction</h2>
+      <p> 
+        Electric motors are one of the most common types of actuators found in robotics. Effectively using motors in your design will allow your robot to take action based on the direction given by its sensors and programming. Although there are many types of electric motors, this section will focus on the mechanics, mathematics, and proper use of DC permanent magnet, brushed motors. Commonly referred to as PMDC motors, they are a popular choice due to their small size and cost, and the fact that unlike many DC motors, powering them is as simple as connecting a constant voltage to the motor. 
+      </p>
+      <div align="center" class="picDiv" id="bodyImg1">
+        <table>
+        <caption align="bottom" class="captionText">
+        Figure 1-1 - Variety of Permanent Magnet DC Motors.
+        </caption>
+              <td><img src="../images/RBE1001_Motors_Figure1.jpg" width="400" height="301"></td></tr>
+      </table>
+  </div>
+
+  <h3>
+    Basic Concepts
+  </h3>
+      <p>
+      A motor is an imperfect <strong>transducer</strong>. Motors are used to convert electrical power into mechanical power, in this case, a <strong>torque</strong> applied to the motor’s output shaft. However, motors will also inevitably transform some of the given electrical power into thermal energy, heating up the motor instead of producing useful work.
+     </p>
+<p>
+  Both power input and output can be measured in any unit of power, typically Watts. Power  is the rate at which work is done. In mechanical terms, high power implies that not only is a load being moved with a great deal of speed, but continuing to move the load demands a great deal of force of a system. In terms of a rotating motor, power is calculated using the formula <strong>P=k&tau;&omega;</strong>.
+</p>
+<p>
+Where <strong>&tau;</strong> is the torque , twisting effort, being output by the motor, <strong>&omega;</strong> is the angular velocity of the output, and <strong>k</strong> the scale factor is used to correct for varied units . Some of the more common scale factors are .0118 for when in*lbs are used along with Watts and RPM, and .1047 when N*m are used with Watts and RPM.</p>
+<p>A key point to remember is that torque and velocity are equally important in the power formula. You could have X torque and Y speed, or Y torque and X speed, and get the exact same amount of power. If you ever had zero speed or zero torque, there would be no power. </p>
+<p>
+Electrical power, also measured in Watts, is calculated using the formula P=IV, where I is electrical current in Amperes, and V is the motor’s voltage. A motor that is drawing 40 amps while connected to a 12 volt supply is using how many Watts of electrical power?
+</p>
+<ul class="mktree" id="tree1">
+  <li>Answer
+		<ul>
+			      <li>
+            <p>40A*12V=480W<br>
+            480 Watts</p>
+            </li>
+		</ul>
+	</li>
+</ul>
+<p>
+Motors are typically rated according to the mechanical power that they can output. The power rating is a limiting factor as infinite torque can be generated through transmissions, but through each transmission power is reduced. If at the same time as this same motor draws 480 Watts of electrical power, it is spinning at 3800RPM and outputting 6.15 in*lbs of torque , how many Watts of power is it outputting? Remember as mentioned before the conversion factor for using in*lbs with RPM and Watts is 0.0118.
+</p>
+<ul class="mktree" id="tree1">
+  <li>Answer
+		<ul>
+			      <li>
+            <p>0.0118*3800RPM*6.15in*lbs=275W<br>
+            It is outputting 275 Watts</p>
+            </li>
+		</ul>
+	</li>
+</ul>
+<p>
+Obviously a significant amount of power was lost in this process. Dividing power output by power input produces an important value for all motors called efficiency. P<sub>out</sub>/P<sub>in</sub>=e<sub>efficiency</sub>, in our case 275 Watts/480 Watts = 0.573. Typically presented as a percent, efficiency tells you how much of the electrical power being input to the motor is actually being converted to useful mechanical power. The remaining power, in this case 205 Watts, is wasted as heat and sound.
+</p>
+<p><strong><a href="PRBE1001_Motor_Menu_Rev0_A.html">&lArr; Previous Page</a></strong>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<strong><a href="PRBE1001_Motor_Menu_Rev0_A.html">Menu</a></strong>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+<strong><a href="RBE1001_Motors_Sec2_Text_Rev0_A.html">Next Page &rArr;</a></p></strong>
+
+<p style="text-align:center"><strong><a href="https://docs.google.com/forms/d/1yYVLX-CHQlKG1wzhoCCCK5ogmY0jLGRjtkXJk09xU-I/viewform">Give Feedback!</a></strong></p>
+
+    </section>
+    
+  <!-- end .content --></article>
+
+  <!--
+  <aside>
+    <h4>Definitions</h4>
+    <p><strong>Transducer</strong> something that changes enegy from one form to another.</p>
+    <p><strong>Torque</strong> twisting Force. </p>
+    <p><strong>Power</strong> rate of work.</p>
+
+         <p>&nbsp;</p>
+ </aside>
+ -->
+
+  	<footer>
+	    <p>For more information visit your professor, TA or google/wikipedia.</p>
+	    <address>
+	      Developed for the use of WPI Student in RBE1001
+	    </address>
+  	</footer>
+  	</body>
+</html>

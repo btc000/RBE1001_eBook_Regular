@@ -1,0 +1,172 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>RBE2001 Virtual Study Aid Template</title>
+<script type="text/javascript" src="../src/tree_menu.js"></script>
+<link rel="stylesheet" type="text/css" href="../src/pagestyle.css">
+<style type="text/css">
+<!--
+-->
+</style><!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]--></head>
+
+<body>
+
+<div class="container">
+  <header>
+    <a href="#"><img src="../images/WPI_Inst_Prim_FulClr_Rev.png" alt="Insert Logo Here" name="Insert_logo" width="180" height="63" id="Insert_logo" style="background-color: #AC2B37; display: block; padding: 10px;" /></a>
+  </header>
+  <div class="sidebar1">
+    <span class="sideBarTitle">Introduction to Robotics</span>
+    
+<ul class="mktree" id="tree1">
+  <li>Chapter 1
+		<ul>
+			<li>Introduction
+             <ul>
+                    <li><a href="../OpAmp_Sec1_Text_Rev0_A.html">Text</a></li>
+                    <li>Practice</li>
+                </ul>
+            </li>
+            <li>Mathematical Model
+                <ul>
+                    <li><a href="../OpAmp_Sec2_Text_Rev0_A.html">Text</a></li>
+                    <li>Problem Set</li>
+                    <li>Video</li>
+                </ul>
+            </li>
+            <li>Section 3
+                <ul>
+                    <li>Text</li>
+                    <li>Problem Set</li>
+                    <li>Video</li>
+                </ul>
+            </li>
+		</ul>
+	</li>
+	<li>Chapter 2
+		<ul>
+			<li>Section 1
+                <ul>
+                    <li>Text</li>
+                    <li>Problem Set</li>
+                    <li>Video</li>
+                </ul>
+            </li>
+            <li>Section 2
+                <ul>
+                    <li>Text</li>
+                    <li>Problem Set</li>
+                    <li>Video</li>
+                </ul>
+            </li>
+            <li>Section 3
+                <ul>
+                    <li>Text</li>
+                    <li>Problem Set</li>
+                    <li>Video</li>
+                </ul>
+            </li>
+		</ul>
+	</li>
+    <li>Chapter 3
+		<ul>
+			<li>Section 1
+                <ul>
+                    <li>Text</li>
+                    <li>Problem Set</li>
+                    <li>Video</li>
+                </ul>
+            </li>
+            <li>Section 2
+                <ul>
+                    <li>Text</li>
+                    <li>Problem Set</li>
+                    <li>Video</li>
+                </ul>
+            </li>
+            <li>Section 3
+                <ul>
+                    <li>Text</li>
+                    <li>Problem Set</li>
+                    <li>Video</li>
+                </ul>
+            </li>
+		</ul>
+	</li>
+</ul>
+    <aside>
+    </aside>
+  <!-- end .sidebar1 --></div>
+  <article class="content">
+    <h1>Motors</h1>
+    <section>
+     <h2>Building a Motor Curve</h2>
+ 
+ 
+ <p>Using this data, we can set up our motor curve (shown in figure 4-1). Start with the X axis for torque, which will go from zero (at free speed) to the measured stall torque. Speed can be graphed next, a downwards linear curve moving from the measured free speed on the left, to zero at stall on the right.
+</p>
+
+
+      <div align="center" class="picDiv" id="bodyImg1">
+        <table>
+        <caption align="bottom" class="captionText">
+        Figure 4-1 - BASIC MOTOR LINE FROM FREE TO STALL.
+        </caption>
+              <td><img src="../images/RBE1001_Motors_Figure1.jpg" width="400" height="301"></td></tr>
+      </table>
+  </div>
+<p>
+Current also shares a linear relationship with torque. The current measured at free speed should have been close to, but not quite, zero. This reflects the small amount of power required to overcome internal resistance of the motor. A much larger value should have been seen at stall. Draw a straight line between these two values.
+</p>
+<p>
+Power comes next, and as discussed in the <a href="../RBE1001_Motors_Sec1_Text_Rev0_A.html">Motor Introduction</a> section, is the product of torque, speed, and a scaling factor. Since torque is zero on one end of the graph, and speed is zero on the other, power will also approach zero at each end. Multiplying the functions for torque and speed together will create an inverted parabola, with a peak at exactly 50% torque.
+</p>
+<p>
+Finally, efficiency can be graphed. It is calculated using the formula Powerout/Powerin. Plugging in the formula P=IV for power in, multiplying the linear equation for current by the motor’s voltage, and using the previously derived mechanical power formula, efficiency’s curve can be graphed. It will typically appear as a skewed curve, with a peak at roughly 25% torque.
+</p>
+
+<h2>Interpreting a Motor Curve</h2>
+
+<p>
+A motor curve has four critical points on it: Free speed, peak efficiency, peak power, and stall. As has been discussed, free speed and stall are not particularly useful. Even though a motor is physically capable of putting out its free speed, it doesn’t do you any good, because there is no torque, and therefore no power being produced there. And don’t count on a motor to lift a load at it’s stall torque, because it will do so with zero speed. Stall is actually a particularly dangerous position, because even though the motor is operating at 0% efficiency, it is drawing a tremendous
+amount of current, and therefore, using a huge amount of electrical power. Besides wasting power, this can be dangerous, because this power has to go somewhere. It is burned up in the form of heat, which can easily damage a motor. This is especially hazardous to smaller air cooled motors, which can smoke within seconds of being stalled.
+</p>
+<p>
+
+Motors are often designed to operate near either peak power or peak efficiency. At peak efficiency, the greatest percentage of electrical power input to the motor is being converted into usable mechanical power. This is useful in an application where sustaining battery power is a high priority. At peak power, the motor is doing the most mechanical work it is capable of. If a robot is required to lift a specified load, operating the motor at peak power will lift this load the fastest.
+</p>
+<p>
+
+Any level of power below peak power can be achieved in two ways: with high speed and low torque, or low speed and high torque. Generally, it is preferable to stay on the high speed, low torque side of the motor curve. This is because of efficiency, and it’s skewed curve. Operating on this side of the curve will generally give you higher efficiency, and will always draw less current. And drawing less current reduces the likelihood of damaging your motor
+</p>
+
+
+
+<p><strong><a href="RBE1001_Motors_Sec3_Text_Rev0_A.html">&lArr; Previous Page</a></strong>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<strong><a href="PRBE1001_Motor_Menu_Rev0_A.html">Menu</a></strong>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+<strong><a href="RBE1001_Motors_Sec5_Text_Rev0_A.html">Next Page &rArr;</a></p></strong>
+
+<p style="text-align:center"><strong><a href="https://docs.google.com/forms/d/1yYVLX-CHQlKG1wzhoCCCK5ogmY0jLGRjtkXJk09xU-I/viewform">Give Feedback!</a></strong></p>
+
+    </section>
+    
+  <!-- end .content --></article>
+  <aside>
+    <h4>Definitions</h4>
+    <p><strong>Transducer</strong> something that changes enegy from one form to another.</p>
+    <p><strong>Torque</strong> twisting Force. </p>
+    <p><strong>Power</strong> rate of work.</p>
+
+         <p>&nbsp;</p>
+ </aside>
+  <footer>
+    <p>For more information visit your professor, TA or google/wikipedia.</p>
+    <address>
+      Developed for the use of WPI Students in RBE1001
+    </address>
+  </footer>
+  <!-- end .container --></div>
+</body>
+</html>
